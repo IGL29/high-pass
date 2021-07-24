@@ -1,0 +1,10 @@
+@mixin svg-state {
+
+  &:hover {
+    fill: $color-burning-orange;
+  }
+
+  &:active {
+    fill: $color-grenadier;
+  }
+}

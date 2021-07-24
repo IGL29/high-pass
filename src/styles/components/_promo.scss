@@ -1,0 +1,134 @@
+$color-text-sale: $color-yellow;
+$color-descr: $color-white;
+
+.aside {
+  display: grid;
+  grid-template-columns: 220px;
+  grid-template-rows: 1fr auto auto;
+  justify-items: start;
+  margin-top: 9px;
+  padding: 18px 31px 32px;
+  background-image: url("../images/promo.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top -50px center;
+
+  &__text-1 {
+    @include font-tt-firs-neue(700);
+    font-size: 36px;
+    color: $color-text-sale;
+  }
+
+  &__text-2 {
+    position: relative;
+    margin-bottom: 13px;
+    padding: 10px 17px;
+    font-family: "TT-Firs-Neue";
+    font-weight: 700;
+    font-size: 27px;
+    color: #fff500;
+    border: 4px solid #fff500;
+    border-radius: 50%;
+  }
+
+  &__text-3 {
+    margin-bottom: 14px;
+    color: $color-descr;
+    font-size: 16px;
+  }
+
+  &__span {
+    display: block;
+    font-size: 15px;
+  }
+}
+
+.services-tab {
+  display: none;
+
+  &--active {
+    display: grid;
+  }
+}
+
+@media (max-width: 1200px) {
+  .aside {
+    background-position: center;
+
+    &__text-3 {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .aside {
+    grid-row: 2;
+    grid-template-columns: 220px 1fr;
+    margin-top: 0;
+    padding: 22px 31px 28px;
+    background-image: url("../images/promo-768.png");
+
+    &__text-1 {
+      grid-area: 1 / 1;
+    }
+
+    &__text-2 {
+      grid-area: 1 / 2;
+      justify-self: end;
+      align-self: start;
+    }
+
+    &__text-3 {
+      grid-column: 1;
+      margin-bottom: 14px;
+    }
+
+    &__link {
+      grid-column: 1;
+    }
+  }
+
+  .services {
+    grid-row: 1;
+  }
+
+  .grid-container {
+    grid-template-rows: auto minmax(336px, auto) auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .aside {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: minmax(283px, auto);
+    padding-top: 21px;
+    background-image: url("../images/promo-320.png");
+
+    &__text-1 {
+      line-height: 1.2;
+      font-size: 30px;
+    }
+
+    &__span {
+      font-size: 13px;
+    }
+
+    &__text-2 {
+      margin-top: 5px;
+      padding: 6px 10px;
+      font-size: 21px;
+    }
+
+    &__text-3 {
+      grid-column: 1 / -1;
+      margin-bottom: 17px;
+      font-size: 14px;
+    }
+
+    &__link {
+      grid-column: 1/-1;
+      font-size: 14px;
+    }
+  }
+}

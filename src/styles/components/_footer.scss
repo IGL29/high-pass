@@ -1,0 +1,139 @@
+$footer-background-color: $color-mine-shaft;
+$color-silver-lighten: #cacaca;
+$color-mercury-approx: #e9e9e9;
+$color-dove-gray: #666666;
+$footer-background-bottom-color: $color-tundora;
+
+.footer {
+  background-color: $footer-background-color;
+
+  &__container {
+    display: grid;
+    grid-template-columns: auto 376px auto;
+    justify-content: space-between;
+    padding-top: 25px;
+    padding-bottom: 10px;
+  }
+
+  &__list-social {
+    grid-column-gap: 0;
+  }
+
+  &__copywrite {
+    margin: 0;
+    color: $color-mercury-approx;
+    @include font-tt-firs-neue(400);
+    font-size: 14px;
+  }
+}
+
+.social-container {
+  &__text {
+    margin: 0 0 8px;
+    color: $color-silver-lighten;
+  }
+}
+
+.footer__text {
+  margin-bottom: 0;
+  line-height: 1.3;
+  color: $color-silver-lighten;
+}
+
+.footer__span {
+  display: block;
+  color: $color-dove-gray;
+}
+
+.footer__logo-link {
+  display: inline-block;
+}
+
+@media (max-width: 1200px) {
+  .footer {
+    &__container {
+      padding-top: 27px;
+      padding-bottom: 19px;
+    }
+
+    &__logo-link {
+      margin-bottom: 5px;
+    }
+
+    &__img {
+      width: 166px;
+    }
+
+    &__text {
+      padding-left: 20px;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .footer__text {
+    display: none;
+  }
+
+  .footer__container {
+    grid-template-columns: auto auto;
+    padding-top: 29px;
+    padding-bottom: 16px;
+  }
+
+  .footer__list-social {
+    width: 150px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer {
+    &__container {
+      grid-template-rows: auto minmax(52px, auto);
+      grid-template-columns: 1fr;
+      justify-items: center;
+      padding-top: 36px;
+      padding-left: 0;
+      padding-right: 0;
+      padding-bottom: 0;
+    }
+
+    &__img {
+      display: block;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    &__social-container {
+      margin-bottom: 26px;
+    }
+
+    &__list-social {
+      justify-content: space-around;
+      width: 154px;
+    }
+
+    &__wrapper-logo {
+      grid-row: 2;
+      width: 100%;
+      background-color: $footer-background-bottom-color;
+      padding: 15px 15px 13px;
+    }
+
+    &__text {
+      grid-row: 1;
+    }
+
+    &__logo-link {
+      margin: 0 auto 5px;
+      display: block;
+      width: 110px;
+    }
+
+    &__copywrite {
+      font-size: 10px;
+      text-align: center;
+    }
+  }
+}

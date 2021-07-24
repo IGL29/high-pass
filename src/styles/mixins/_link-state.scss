@@ -1,0 +1,21 @@
+@mixin link-hover {
+  color: $color-burning-orange;
+}
+
+@mixin link-focus-before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  width: 105%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  background-color: $color-romantic;
+  transition: opacity 0.3s;
+  opacity: 0;
+}
+
+@mixin link-active {
+  color: $color-grenadier;
+}

@@ -1,0 +1,13 @@
+@mixin font-tt-firs-neue($weight) {
+  font: {
+    family: "TT-Firs-Neue";
+    weight: $weight;
+  }
+}
+
+@mixin font-roboto($weight) {
+  font: {
+    family: "Roboto";
+    weight: $weight;
+  }
+}
